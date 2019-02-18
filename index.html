@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Matt McPartlan: Portfolio of Projects</title>
+  <meta name="description" content="A brief demonstration of extracurricular projects." />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+  <script src="js/lodash.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <ul id="navbar">
+      <li id="name-bar"><a class="page-top">Matt McPartlan</a></li>
+      <li class="nav-item" id="logex-board-bar"><a >Logex</a></li>
+      <li class="nav-item" id="gas-chromatography-bar"><a>Gas Chromatography</a></li>
+      <li class="nav-item" id="robotic-bartender-bar"><a>Robotic Bartender</a></li>
+      <li class="nav-item" id="onewire-arduino-bar"><a>OneWire</a></li>
+      <li class="nav-item" id="classic-instrumentation-bar"><a>Classic Instruments</a></li>
+      <li class="nav-item" id="breadboard-nixies-bar"><a>Breadboard Nixie Tubes</a></li>
+      <li class="nav-item" id="contact-bar"><a>Contact</a></li>
+    </ul>
+    <div id="heading">
+      <div id="about-me">
+        <header>
+          <h1 class="white-title">About Me</h1>
+        </header>
+        <p class="white-body">
+          I am a junior at Loyola Marymount University in Los Angeles studying
+          electrical engineering and chemistry. For as long as I can remember, I have been designing
+          and building just about everything interesting that comes into my head. My
+          first project, back in 3rd grade, was a remote controlled car that
+          I took apart and turned into a wireless "parent alert system" to help my sister get
+          attention when she had the flu. Though it was later abused and mysteriously disappeared,
+          it set the stage for much of the work I've done since.
+          <br>
+          <br>
+          I feel that what I do outside of the classroom sets me apart from other applicants, so
+          I have put together the following portfolio of projects to suppliment my resume. Thank you for
+          considering me as an applicant.
+        </p>
+      </div>
+      <img id="profile" src="files/profile.jpeg" alt="Profile picture"/>
+      <div id="relavant-skills">
+        <header>
+          <h1 class="white-title">Relevant Skills</h1>
+        </header>
+        <ul id="skill-list">
+          <li> Experience with Tektronix lab equipment </li>
+          <li> Manual and CNC machining </li>
+          <li> Experience with assembly programming </li>
+          <li> Proficient in C, Java, C++, and MATLAB </li>
+          <li> Web development (this website is 100% original) </li>
+        </ul>
+        <ul id="skill-list2">
+          <li> Proficient in HTML, CSS, and JavaScript </li>
+          <li> Instrumentation amplifier design </li>
+          <li> Proficient in AutoCAD and Autodesk Eagle </li>
+          <li> Familiar with FPGAs and VHDL programming </li>
+          <li> Experience with small-scale manufacturing </li>
+        </ul>
+      </div>
+    </div>
+    <div id="text-content">
+      <article class="text-article" id="logex-board">
+        <header>
+          <h1>Logex Prototyping Board</h1>
+        </header>
+        <p>
+          During my freshman year of college, I found a need to build permenant prototypes to test
+          digital logic circuits. Existing protoboards were often poor quality and difficult to use,
+          so I designed one specifically to address the challenges of building dense digital circuits.
+          <br>
+          <br>
+          After using them extensively for personal projects, I decided to launch a Kickstarter
+          campaign and sell the boards commercially. Over 300 boards were sold in the first
+          three weeks of fundraising and the project is over 270% funded.
+          <br>
+          <br>
+          More information can be found on the Kickstarter campaign linked below:
+          <br>
+          <a target="_blank" href="https://www.kickstarter.com/projects/1998140538/logex-electronics-prototyping-reimagined?ref=user_menu">Kickstarter: LOGEX Prototyping</a>
+        </p>
+      </article>
+      <article class="text-article" id="gas-chromatography">
+        <header>
+          <h1>A New Gas Chromatograph</h1>
+        </header>
+        <p>
+          This year, I was invited to work with Dr. Robert Senter in the LMU Chemistry
+          Department on a new type of gas chromatograph detector (shown in top image). Rather than the expensive thin-filament
+          RTDs used in many teaching lab instruments, our system is based on the V/T relationship of a diode
+          when current is held constant.
+          <br>
+          <br>
+          In addition to designing the sensor driver and small signal amplifier, I also modified an old gas chromatograph
+          (shown in bottom image) for use with our new sensor.
+          <br>
+          <br>
+          The diode detectors we have built have many advantages that make them uniquely suited for use in
+          a teaching lab. They are rugged, do not require helium as a carrier gas, and inexpensive to make
+          and use.
+        </p>
+      </article>
+      <article class="text-article" id="robotic-bartender">
+        <header>
+          <h1>Robotic Bartender</h1>
+        </header>
+        <p>
+          Development of this project can be broken into two major versions. Version 1 was built around an an Arduino
+          Uno and was able to mix up to 6 ingredients at a time. It also supported individual passcodes for access
+          control.
+          <br>
+          <br>
+          Version 2, shown in the attached pictures at two different stages of development, is based on the Intel Curie SOC
+          and can mix up to 10 ingredients. It also offers users the option to carbonate the entire beverage in a CNC-milled
+          pre-dispensing chamber.
+          <br>
+          <br>
+          Recipies for Version 2 are defined using an accompanying Mac desktop app (which I wrote in Swift). Each user is able
+          to create a local account using any card with a magnetic stripe as their unique user ID.
+          After swiping a card associated with an account, recipes can be created and saved by moving sliders around.
+          Volume dispensed under each account is recorded so that guests can be charged appropriately at the end of the event.
+          <br>
+          <br>
+          This project taught me most of what I know about CNC machining and C/C++ programming. All parts, software, and circuit designs
+          are completely original.
+        </p>
+      </article>
+      <article class="text-article" id="onewire-arduino">
+        <header>
+          <h1>OneWire for Arduino</h1>
+        </header>
+        <p>
+          This was actually a motor interface controller I designed for Version 1 of the robotic bartender to make better use of the limited
+          I/O ports on the Arduino Uno. It allows one microcontroller output pin to control up to 31 output devices by automatically detecting incomming
+          serial data and writing it to a bank of four 74HC595 shift registers.
+          <br>
+          <br>
+          After the first prototype was successful, I decided to design and order a PCB (shown in bottom picture). The project was discontinued
+          when I found integrated circuits that implement a similar communication protocol, but I learned a lot from designing my own solution.
+        </p>
+      </article>
+      <article class="text-article" id="classic-instrumentation">
+        <header>
+          <h1>Classic Instruments</h1>
+        </header>
+        <p>
+          As a college student, I can't afford to buy lab-grade instruments for personal use. To get around this,
+          I frequently buy broken or defective instruments (oscilliscopes, DMMs, LC meters, etc.) on eBay with
+          the intention of fixing and calibrating them for personal use (or resale). I have accumulated nearly a complete
+          set of old Tektronix instruments that I have used extensively when testing out new designs.
+          <br>
+          <br>
+          The instrument shown on the right is a 1969 Tektronix 453 oscilloscope that I fixed a couple months
+          ago. Despite being 50 years old, it is an amazing piece of technology and has become my favorite tool
+          for working on old electonic equipment, especially high voltage vacuum tube circuits.
+        </p>
+      </article>
+      <article class="text-article" id="breadboard-nixies">
+        <header>
+          <h1>Breadboard Nixie Tubes</h1>
+        </header>
+        <p>
+          Freshman year of college, I became fascinated with old style numeric displays (nixie tubes),
+          and bought several to experiment with. To get the 160 VDC needed to drive them, I built a simple
+          buck-boost converter from a topology published online. I used the only inductors and capacitors
+          I had on hand and programmed an Arduino to control the switching until I found a frequency that worked.
+          I then replaced the Arduino with a 555 timer configured to switch at the same frequency (shown in picture).
+        </p>
+      </article>
+      <article class="text-article" id="contact">
+        <header>
+          <h1>Contact Information</h1>
+        </header>
+        <p>
+          Thank you for your consideration! I can be reached through either of the two contact
+          methods shown below:
+          <br>
+          <br>
+          <b> Cell: </b> 650-995-4172
+          <br>
+          <b> Email: </b> mmcpart1@lion.lmu.edu
+        </p>
+      </article>
+
+      <!-- Parallax foreground -->
+      <div id="filler">
+        <div class="photo-block">
+          <img class="block-top" src="files/Schematic.jpeg" alt="Logex schematic"/>
+          <img class="block-bottom" src="files/Compare.jpeg" alt="Logex schematic"/>
+        </div>
+        <div class="photo-block">
+          <img class="block-top" src="files/chromatograph.jpeg" alt="Gas chromatograph"/>
+          <img class="block-bottom" src="files/chromatograph2.jpeg" alt="Gas chromatograph2"/>
+        </div>
+        <div class="photo-block">
+          <img class="block-top" src="files/robot.jpeg" alt="Robotic bartender"/>
+          <img class="block-bottom" src="files/robot2.jpeg" width="446" alt="Robotic bartender"/>
+        </div>
+        <div class="photo-block">
+          <img class="block-top" src="files/onewire.jpeg" alt="Onewire"/>
+          <img class="block-bottom " src="files/onewire2.jpeg" alt="Onewire"/>
+        </div>
+        <div class="photo-block">
+          <img src="files/instrumentation.jpeg" alt="Instrumentation"/>
+        </div>
+        <div class="photo-block">
+          <img src="files/nixies.jpeg" alt="Nixies"/>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Background sections -->
+    <div class="background-section"></div>
+    <div class="background-section"></div>
+    <div class="background-section"></div>
+    <div class="background-section"></div>
+  </div>
+</body>
+<script  src="js/index.js"></script>
+</html>
