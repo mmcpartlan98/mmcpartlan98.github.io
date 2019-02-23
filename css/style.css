@@ -173,6 +173,7 @@ p {
   position: absolute;
   grid-area: photoContent;
   width: 100%;
+  max-width: 500px;
 }
 
 .photo-block {
