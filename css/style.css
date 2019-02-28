@@ -44,7 +44,7 @@ p {
   left: 0;
   height: 1050px;
   width: 100%;
-  min-width: 2000px;
+  min-width: 1200px;
   overflow: hidden;
   z-index: -1;
 }
@@ -58,7 +58,7 @@ p {
   grid-template-rows: 450px 450px;
   top: 0;
   width: 100%;
-  min-width: 1600px;
+  min-width: 1200px;
   max-width: 3000px;
   height: 900px;
 }
@@ -73,7 +73,8 @@ p {
   top: 750px;
   left: 0;
   width: 100%;
-  min-width: 2000px;
+  min-width: 1200px;
+  max-width: 3000px;
   overflow: hidden;
   height: 7350px;
 }
@@ -176,6 +177,11 @@ p {
   grid-area: photoContent;
   width: 100%;
   max-width: 500px;
+}
+
+#robotic-bartender {
+  max-height: 900px;
+  overflow: scroll;
 }
 
 .photo-block {

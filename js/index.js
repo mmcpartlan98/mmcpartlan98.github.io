@@ -97,6 +97,7 @@ function throwContent() {
   // Layout background blocks
   for (var i = 0; i < backgrounds.length; i++) {
       backgrounds[i].style.top = (i * 2100 - 100) + "px";
+      backgrounds[i].style.height = 1050 + "px";
     }
 };
 
