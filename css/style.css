@@ -44,7 +44,7 @@ p {
   left: 0;
   height: 1050px;
   width: 100%;
-  min-width: 1600px;
+  min-width: 2000px;
   overflow: hidden;
   z-index: -1;
 }
@@ -73,7 +73,7 @@ p {
   top: 750px;
   left: 0;
   width: 100%;
-  min-width: 1600px;
+  min-width: 2000px;
   overflow: hidden;
   height: 7350px;
 }
