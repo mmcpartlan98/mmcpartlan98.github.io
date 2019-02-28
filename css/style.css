@@ -44,7 +44,7 @@ p {
   left: 0;
   height: 1050px;
   width: 100%;
-  min-width: 1250px;
+  min-width: 1600px;
   overflow: hidden;
   z-index: -1;
 }
@@ -54,11 +54,12 @@ p {
   grid-template-areas:
     "text photo"
     "skills1 skills2";
-  grid-template-columns: 4fr 1.5fr;
+  grid-template-columns: 3.8fr 1.7fr;
   grid-template-rows: 450px 450px;
   top: 0;
   width: 100%;
-  min-width: 1250px;
+  min-width: 1600px;
+  max-width: 3000px;
   height: 900px;
 }
 #text-content {
@@ -72,7 +73,7 @@ p {
   top: 750px;
   left: 0;
   width: 100%;
-  min-width: 1250px;
+  min-width: 1600px;
   overflow: hidden;
   height: 7350px;
 }
@@ -131,22 +132,23 @@ p {
 
 #relavant-skills {
   grid-area: "skills1";
+  display: block;
   padding-left: 275px;
-  width: auto;
   height: 100%;
   max-height: 450px;
   overflow: visible;
 }
 
 #skill-list {
+  width: 450px;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 #skill-list2 {
-  position: relative;
-  top: -120px;
-  left: 400px;
-  width: 400px;
+  width: 450px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #about-me {
