@@ -73,10 +73,6 @@ $(document).ready(function() {
     });
     return false;
   });
-  $('#mp-sim').click(function(){
-    location.href = "meltingPoint.html";
-    return false;
-  });
 });
 
 /* Scroll the background layers */
