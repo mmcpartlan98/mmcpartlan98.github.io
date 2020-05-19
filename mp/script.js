@@ -1,6 +1,8 @@
 var rampStart;
 var rampEnd;
 var rampRate; //Degrees C per min
+var meltingPoint;
+var unknownCode;
 
 var timeoutQueue = new Array(setTimeout(function() {
   console.log("Starting...");
@@ -19,31 +21,43 @@ function task2(temp, iterations) {
 }
 
 function startButton() {
-  var alertFlag = false;
   //console.log("Start detected!")
   if (isNaN(parseFloat(document.getElementById("rstart").value))) {
-    alertFlag = true;
+    alert("Start temperature cannot be blank!")
+    return false;
   } else {
     rampStart = parseFloat(document.getElementById("rstart").value);
   }
   if (isNaN(parseFloat(document.getElementById("rend").value))) {
-    alertFlag = true;
+    alert("End temperature cannot be blank!")
+    return false;
   } else {
     rampEnd = parseFloat(document.getElementById("rend").value);
   }
   if (isNaN(parseFloat(document.getElementById("rrate").value))) {
-    alertFlag = true;
+    alert("Ramp rate cannot be blank!")
+    return false;
   } else {
     rampRate = parseFloat(document.getElementById("rrate").value);
   }
   if (isNaN(parseFloat(document.getElementById("mpset").value))) {
-    alertFlag = true;
-  } else {
-    meltingPoint = parseFloat(document.getElementById("mpset").value);
-  }
-  if (alertFlag) {
-    alert("Illegal argument (cannot be blank).")
+    alert("Unknown code cannot be blank!")
     return false;
+  } else {
+    unknownCode = parseFloat(document.getElementById("mpset").value);
+    switch(unknownCode) {
+      case 1001:
+        meltingPoint = 60;
+        break;
+      case 1002:
+        meltingPoint = 180;
+        break;
+      case 1003:
+        meltingPoint = 120;
+        break;
+      default:
+        alert("Invalid unknown code!");
+    }
   }
 
   temp = rampStart;
