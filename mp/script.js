@@ -41,12 +41,12 @@ function startButton() {
 }
 
 function resetButton() {
-  temp = rampStart;
   document.getElementById("thermometer").innerHTML = "Temperature: ".concat(String(temp.toFixed(2)), " C");
   document.getElementById("endImage").style.opacity = "0";
   rampStart = defaultRampStart;
   rampEnd = defaultRampEnd;
   rampRate = defaultRampRate;
+  temp = rampStart;
   document.getElementById("rstart").value = document.getElementById("rstart").defaultValue;
   document.getElementById("rend").value = document.getElementById("rend").defaultValue;
   document.getElementById("rrate").value = document.getElementById("rrate").defaultValue;
@@ -68,4 +68,8 @@ function changeButton() {
   document.getElementById("end").innerHTML = "End temperature: ".concat(String(rampEnd.toFixed(2)), " C");
   document.getElementById("ramp").innerHTML = "Ramp rate: ".concat(String(rampRate.toFixed(2)), " C/min");
   console.log("Change detected!")
+}
+
+function setMP() {
+  meltingPoint = parseFloat(document.getElementById("mpset").value);
 }
