@@ -4,9 +4,10 @@ var rampRate; //Degrees C per min
 var meltingPoint;
 var unknownCode;
 var simIsRunning;
+var unknownLib = new Array();
 
 d3.csv('https://raw.githubusercontent.com/mmcpartlan98/mmcpartlan98.github.io/master/lib.csv',function(data){
-   	console.log(data);
+   	unknownLib.push(data);
   });
 
 var timeoutQueue = new Array(setTimeout(function() {
@@ -73,20 +74,26 @@ function startButton() {
     alert("Unknown code cannot be blank!")
     return false;
   } else {
-    unknownCode = parseFloat(document.getElementById("mpset").value);
-    switch(unknownCode) {
-      case 1001:
-        meltingPoint = 60;
-        break;
-      case 1002:
-        meltingPoint = 180;
-        break;
-      case 1003:
-        meltingPoint = 120;
-        break;
-      default:
-        alert("Invalid unknown code!");
-    }
+    unknownCode = parseInt(document.getElementById("mpset").value);
+	
+	meltingPoint = -1; // Error state
+	  
+	for (index in unknownLib) {
+		if (Math.floor(unknownCode/10) == Math.floor(parseInt(unknownLib[index].id)/10)) {
+			meltingPoint = parseFloat(unknownLib[index].mp);
+			
+			var impurityModifier = (unknownCode/10 - Math.floor(unknownCode/10))/5;
+			meltingPoint = meltingPoint - meltingPoint * impurityModifier;
+			
+			console.log(unknownLib[index].name + " w/ impurity modifier " + impurityModifier);
+		}
+	}
+	  
+	if (meltingPoint == -1) {
+		alert("Invalid unknown code");
+		return false;
+	}
+	  
 	meltingPoint = meltingPoint + rampRateConfoundulator(rampRate);
 	  console.log(meltingPoint);
   }
