@@ -5,6 +5,10 @@ var meltingPoint;
 var unknownCode;
 var simIsRunning;
 
+d3.csv('https://raw.githubusercontent.com/mmcpartlan98/mmcpartlan98.github.io/master/lib.csv',function(data){
+   	console.log(data);
+  });
+
 var timeoutQueue = new Array(setTimeout(function() {
   console.log("Starting...");
 }, 10));
