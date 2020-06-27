@@ -124,11 +124,9 @@ function clearButton() {
       clearTimeout(index);
   });
 	
-  document.getElementById("start").innerHTML = "Start temperature: ";
   document.getElementById("end").innerHTML = "End temperature: ";
   document.getElementById("ramp").innerHTML = "Ramp rate: ";
 	
-  document.getElementById("rstart").value = '';
   document.getElementById("rend").value = '';
   document.getElementById("rrate").value = '';
   document.getElementById("mpset").value = '';
