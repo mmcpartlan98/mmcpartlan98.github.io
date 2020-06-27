@@ -1,4 +1,4 @@
-var rampStart;
+var rampStart = 22;
 var rampEnd;
 var rampRate; //Degrees C per min
 var meltingPoint;
@@ -52,12 +52,6 @@ function startButton() {
   }
   simIsRunning = true;
   //console.log("Start detected!")
-  if (isNaN(parseFloat(document.getElementById("rstart").value))) {
-    alert("Start temperature cannot be blank!")
-    return false;
-  } else {
-    rampStart = parseFloat(document.getElementById("rstart").value);
-  }
   if (isNaN(parseFloat(document.getElementById("rend").value))) {
     alert("End temperature cannot be blank!")
     return false;
