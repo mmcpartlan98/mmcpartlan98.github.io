@@ -37,11 +37,11 @@ function rampRateConfoundulator(rate) {
 	if (rate <= 3) {
 		randNum = Math.floor(Math.random() * 2);
 	} else if (rate <= 5) {
-		randNum = Math.floor(Math.random() * 5);
+		randNum = Math.floor(Math.random() * 4);
 	} else if (rate <= 10) {
-		randNum = Math.floor(Math.random() * 10);
+		randNum = Math.floor(Math.random() * 7);
 	} else {
-		randNum = Math.floor(Math.random() * 50);
+		randNum = Math.floor(Math.random() * 10);
 	}
 	return polarity * randNum;
 }
