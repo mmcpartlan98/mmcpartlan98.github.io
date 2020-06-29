@@ -35,13 +35,13 @@ function rampRateConfoundulator(rate) {
 		polarity = -1;
 	}
 	if (rate <= 3) {
-		randNum = Math.floor(Math.random() * 2);
+		randNum = Math.floor(Math.random() * 2) - 1;
 	} else if (rate <= 5) {
-		randNum = Math.floor(Math.random() * 4);
+		randNum = Math.floor(Math.random() * 5) - 2;
 	} else if (rate <= 10) {
-		randNum = Math.floor(Math.random() * 7);
+		randNum = Math.floor(Math.random() * 6) - 3;
 	} else {
-		randNum = Math.floor(Math.random() * 10);
+		randNum = Math.floor(Math.random() * 7) - 4;
 	}
 	return polarity * randNum;
 }
