@@ -149,6 +149,7 @@ function focusMP() {
 	document.getElementById("tlc-sim").style.cssText = "display: none !important;";
 	document.getElementById("irspec-sim").style.cssText = "display: none !important;";
 	document.getElementById("melting-point-sim").setAttribute('style', 'display:inline-block !important');
+	document.getElementById("purificationQuiz").setAttribute('style', 'display: none !important');
 }
 
 function focusTLC() {
@@ -157,6 +158,7 @@ function focusTLC() {
 	document.getElementById("melting-point-sim").style.cssText = "display: none !important;";
 	document.getElementById("irspec-sim").style.cssText = "display: none !important;";
 	document.getElementById("tlc-sim").setAttribute('style', 'display:inline-block !important');
+	document.getElementById("purificationQuiz").setAttribute('style', 'display: none !important');
 }
 function focusIRSpec() {
 	console.log("IR Spec selection registered.")
@@ -164,4 +166,13 @@ function focusIRSpec() {
 	document.getElementById("tlc-sim").style.cssText = "display: none !important;";
 	document.getElementById("melting-point-sim").style.cssText = "display: none !important;";
 	document.getElementById("irspec-sim").setAttribute('style', 'display:inline-block !important');
+	document.getElementById("purificationQuiz").setAttribute('style', 'display: none !important');
+}
+function focusForm() {
+	console.log("Form selection registered.")
+	document.getElementById("intro").style.cssText = "display: none !important;";
+	document.getElementById("tlc-sim").style.cssText = "display: none !important;";
+	document.getElementById("melting-point-sim").style.cssText = "display: none !important;";
+	document.getElementById("irspec-sim").setAttribute('style', 'display: none !important');
+	document.getElementById("purificationQuiz").setAttribute('style', 'display: inline-block !important');
 }
