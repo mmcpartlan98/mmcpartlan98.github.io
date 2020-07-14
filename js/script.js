@@ -5,6 +5,7 @@ var meltingPoint;
 var unknownCode;
 var simIsRunning;
 var unknownLib = new Array();
+var nameField;
 
 d3.csv('https://raw.githubusercontent.com/mmcpartlan98/mmcpartlan98.github.io/master/lib.csv',function(data){
    	unknownLib.push(data);
@@ -13,6 +14,21 @@ d3.csv('https://raw.githubusercontent.com/mmcpartlan98/mmcpartlan98.github.io/ma
 var timeoutQueue = new Array(setTimeout(function() {
   console.log("Starting...");
 }, 10));
+
+function httpGetAsync(theUrl, callback)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
+}
+
+function loggerCallback(responseText) {
+	console.log("Log submitted");
+}
 
 function task2(temp, iterations) {
   timeoutQueue.push(setTimeout(function() {
@@ -58,6 +74,12 @@ function startButton() {
    } else {
      rampStart = parseFloat(document.getElementById("rstart").value);
    }
+  if (document.getElementById("name").value == "") {
+     alert("Start temperature cannot be blank!")
+     return false;
+   } else {
+     nameField = document.getElementById("name").value;
+   }
   if (isNaN(parseFloat(document.getElementById("rend").value))) {
     alert("End temperature cannot be blank!")
     return false;
@@ -97,7 +119,16 @@ function startButton() {
 	meltingPoint = meltingPoint + rampRateConfoundulator(rampRate);
 	  console.log(meltingPoint);
   }
-
+  var currentdate = new Date(); 
+  var datetime = "Simulation Date: " + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + "@"  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+  GETRequest = "https://script.google.com/macros/s/AKfycbxE_XTSSbdqd1-bejqTxFHwgspP3d6CjCwkEZ6ZDZM0x50P-rzr/exec?Name=" + nameField + "&RampRate=" + rampRate + "&SimDate=" + datetime;
+  console.log(GETRequest);
+  httpGetAsync(GETRequest, loggerCallback);
   temp = rampStart;
   document.getElementById("start").innerHTML = "Start temperature: ".concat(String(rampStart.toFixed(2)), " C");
   document.getElementById("end").innerHTML = "End temperature: ".concat(String(rampEnd.toFixed(2)), " C");
