@@ -126,7 +126,7 @@ function startButton() {
                 + currentdate.getHours() + ":"  
                 + currentdate.getMinutes() + ":" 
                 + currentdate.getSeconds();
-  GETRequest = "https://script.google.com/macros/s/AKfycbxE_XTSSbdqd1-bejqTxFHwgspP3d6CjCwkEZ6ZDZM0x50P-rzr/exec?Name=" + nameField + "&RampRate=" + rampRate + "&SimDate=" + datetime;
+  GETRequest = "https://script.google.com/macros/s/AKfycbxE_XTSSbdqd1-bejqTxFHwgspP3d6CjCwkEZ6ZDZM0x50P-rzr/exec?Name=" + nameField + "&Unknown=" + unknownCode + "&RealMP=" + meltingPoint + "&=RampStart" + rampStart + "&RampEnd=" + rampEnd + "&RampRate=" + rampRate + "&SimDate=" + datetime;
   console.log(GETRequest);
   httpGetAsync(GETRequest, loggerCallback);
   temp = rampStart;
